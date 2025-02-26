@@ -25,5 +25,24 @@ public class Tractor extends Vehicle{
 		isOnlyLargeTires = inputIsOnlyLargeTires;
 	}
 	
+	public Tractor() {
+		super();
+		setAdditionalTechniques("cultivator");
+		setIsOnlyLargeTires(true);
+	}
+	
 
+	public Tractor(String inputTitle, float inputPrice, EnergyType inputEnergyType,
+			String inputAdditionalTechniques, boolean inputIsOnlyLargeTires ) {
+		super(inputTitle, inputPrice, inputEnergyType);
+		setAdditionalTechniques(inputAdditionalTechniques);
+		setIsOnlyLargeTires(inputIsOnlyLargeTires);
+	}
+	
+	public String toString() {
+		return super.toString() + ", " + additionalTechniques 
+				+ ", large tires->" + isOnlyLargeTires; 
+	}
+	
+	
 }
