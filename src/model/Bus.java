@@ -26,5 +26,25 @@ public class Bus extends Vehicle{
 	{
 		hasBaggageDivision = inputHasBaggageDivision;
 	}
+	
+	
+	public Bus() {
+		super();//it will call no argument constructor from Vehicle
+		setNumberOfSeats(10);
+		setHasBaggageDivision(true);
+	}
+	
+	public Bus(String inputTitle, float inputPrice, EnergyType inputEnergyType,
+			int inputNumberOfSeats, boolean inputHasBaggageDivision) {
+		super(inputTitle, inputPrice, inputEnergyType);//it will call argument constructor from Vehicle
+		setNumberOfSeats(inputNumberOfSeats);
+		setHasBaggageDivision(inputHasBaggageDivision);
+		
+	}
 
+	public String toString() {
+		return super.toString() + ", " + numberOfSeats + ", has baggage: " + hasBaggageDivision;
+	}
+	
+	
 }
