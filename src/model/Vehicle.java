@@ -70,10 +70,25 @@ public class Vehicle {
 	}
 	
 	//4. no arg. constr.
-	
+	public Vehicle()
+	{
+		setId();
+		setTitle("Test Vehicle");
+		setPrice(100);
+		setVehicleCode();
+		setEnergyType(EnergyType.other);
+	}
 	//5. arg. constr.
-	
+	public Vehicle(String inputTitle, float inputPrice, EnergyType inputEnergyType ) {
+		setId();
+		setTitle(inputTitle);
+		setPrice(inputPrice);
+		setVehicleCode();
+		setEnergyType(inputEnergyType);
+	}
 	//6. toString
-	
+	public String toString() {
+		return id + ": " + title + ", " + price + " eur (" + vehicleCode + "), " + eType; 
+	}
 
 }
