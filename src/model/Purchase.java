@@ -34,4 +34,20 @@ public class Purchase {
 	public void setDateTime() {
 		dateTime = LocalDateTime.now();
 	}
+	
+	public Purchase()
+	{
+		setUserCardNr("ABC123456");
+		setDateTime();
+	}
+	
+	public Purchase(String inputUserCardNr) {
+		setUserCardNr(inputUserCardNr);
+		setDateTime();
+	}
+	
+	public String toString() {
+		return userCardNr + "bought " + shoppingList + " (" + dateTime + ")";
+	}
+	
 }
