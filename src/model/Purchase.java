@@ -82,4 +82,28 @@ public class Purchase {
 		}
 	}
 	
+	public void removeVehicleFromShoppingListByVehicleCode(String inputVehicleCode) throws Exception{
+		if(inputVehicleCode != null)
+		{
+			for(Vehicle tempV : shoppingList) {
+				if(tempV.getVehicleCode().equals(inputVehicleCode)) {
+					for(Vehicle tempVV : MainService.getAllVehicles()) {
+						if(tempVV.getVehicleCode().equals(inputVehicleCode))
+						{
+							shoppingList.remove(tempV);
+							tempVV.setQuantity(tempVV.getQuantity()+1);
+						}
+					}
+				}
+			}
+		}
+		else
+		{
+			throw new Exception("Code param should be not null");
+		}
+	}
+	
+	
+	
+	
 }
