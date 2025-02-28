@@ -75,7 +75,7 @@ public class Vehicle {
 	
 	
 	public void setQuantity(int inputQuantity) {
-		if(inputQuantity > 0 && inputQuantity < 100) {
+		if(inputQuantity >= 0 && inputQuantity < 100) {
 			quantity = inputQuantity;
 		}
 		else
@@ -106,7 +106,7 @@ public class Vehicle {
 	}
 	//6. toString
 	public String toString() {
-		return id + ": " + title + ", " + price + " eur (" + vehicleCode + "), " + eType + " " + quantity; 
+		return id + ": " + title + ", " + price + " eur (" + vehicleCode + "), " + eType + " quantity:" + quantity; 
 	}
 
 }

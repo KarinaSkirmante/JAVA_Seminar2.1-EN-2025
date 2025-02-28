@@ -69,8 +69,7 @@ public class Purchase {
 						for(int i = 0; i < quantity; i++) {
 							shoppingList.add(tempV);
 						}
-
-						tempV.setQuantity(tempV.getQuantity()-quantity);
+						tempV.setQuantity(tempV.getQuantity() - quantity);
 					
 					}
 					
