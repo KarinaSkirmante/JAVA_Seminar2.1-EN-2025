@@ -47,7 +47,7 @@ public class Purchase {
 	}
 	
 	public String toString() {
-		return userCardNr + "bought " + shoppingList + " (" + dateTime + ")";
+		return userCardNr + " bought " + shoppingList + " (" + dateTime + ")";
 	}
 	
 }
