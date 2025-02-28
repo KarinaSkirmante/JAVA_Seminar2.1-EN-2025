@@ -3,6 +3,7 @@ package model;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Vector;
 
 import service.MainService;
 
@@ -102,6 +103,35 @@ public class Purchase {
 			throw new Exception("Code param should be not null");
 		}
 	}
+	
+	public float calculateShoppingListValue() throws Exception {
+		if(shoppingList.isEmpty())
+		{
+			throw new Exception("Shopping list is empty");
+		}
+		
+		float sum = 0;
+		
+		for(Vehicle tempV : shoppingList) {
+			sum = sum + tempV.getPrice();
+		}
+		
+		return sum;
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
