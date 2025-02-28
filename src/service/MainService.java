@@ -34,4 +34,9 @@ public class MainService {
 
 	}
 
+	public static ArrayList<Vehicle> getAllVehicles() {
+		return allVehicles;
+	}
+
+	
 }
